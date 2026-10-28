@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Tags from "@/components/Tags";
 
 export default function Home() {
+  const technologies = ["HTML", "CSS", "JavaScript", "React", "Next.js"];
+  
   return (
     <div className={styles.hero}>
       <div className={styles.heroContent}>
@@ -15,6 +18,12 @@ export default function Home() {
           Je crée des applications web modernes, performantes et accessibles
           avec React, Next.js et Node.js.
         </p>
+        <div className={styles.tagContainer}>
+          {technologies.map((techno) => (         
+            <Tags key= {techno} technologie={techno} />
+          ))}
+          
+        </div>
         <div className={styles.heroButtons}>
           <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
             Voir mes projets
