@@ -269,10 +269,3 @@ a.secondary {
   flex-wrap: wrap;
   margin-bottom:15px;
 }
-.tag {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #e8daef;
-  border-radius: 20px;
-  color:#764ba2;
-}

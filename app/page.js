@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Tags from "@/components/Tags";
+import Tag from "@/components/Tag";
 
 export default function Home() {
   const technologies = ["HTML", "CSS", "JavaScript", "React", "Next.js"];
@@ -20,7 +20,7 @@ export default function Home() {
         </p>
         <div className={styles.tagContainer}>
           {technologies.map((techno) => (         
-            <Tags key= {techno} technologie={techno} />
+            <Tag key= {techno}>{techno}</Tag>
           ))}
           
         </div>
