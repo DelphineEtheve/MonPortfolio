@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Tag from "@/components/Tag";
+import Tag from "@/components/Tag/Tag";
 
 export default function Home() {
   const technologies = ["HTML", "CSS", "JavaScript", "React", "Next.js"];
