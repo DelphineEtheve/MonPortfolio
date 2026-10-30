@@ -1,7 +1,12 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import styles from './Navigation.module.css'
 
+
 export default function Navigation() {
+  const pathname = usePathname()
   return (
     <nav className={styles.nav}>
       <div className="container">
@@ -11,22 +16,50 @@ export default function Navigation() {
 
         <ul className={styles.menu}>
           <li>
-            <Link href="/" className={styles.link}>
+            <Link
+              href="/"
+              className={
+                pathname === '/'
+                ? `${styles.link} ${styles.active}`
+                : styles.link
+              }
+            >
               Accueil
             </Link>
           </li>
           <li>
-            <Link href="/projets" className={styles.link}>
+            <Link
+              href="/projets"
+              className={
+              pathname === '/projets' || pathname.startsWith('/projets/')
+              ? `${styles.link} ${styles.active}`
+              : styles.link
+              }
+            >
               Projets
             </Link>
           </li>
           <li>
-            <Link href="/a-propos" className={styles.link}>
+            <Link 
+              href="/a-propos" 
+              className={
+                pathname=="/a-propos" 
+                ? `${styles.link} ${styles.active}`
+                : styles.link
+              }
+            >
               À propos
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={styles.link}>
+            <Link 
+              href="/contact" 
+              className={
+                pathname == "/contact"
+                ? `${styles.link} ${styles.active}`
+                : styles.link
+              }
+            >
               Contact
             </Link>
           </li>

@@ -1,0 +1,15 @@
+.container {
+    background-color: rgb(177, 233, 233);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.title {
+    font-size: 4rem;
+    color: #9c34ec;
+}
+
+.message {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}

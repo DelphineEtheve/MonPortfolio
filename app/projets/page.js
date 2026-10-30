@@ -22,7 +22,8 @@ export default function Projects() {
        </Link>
 
 
-        <div className={styles.card}>
+        
+        <Link href="/projets/ecommerce" className={styles.card}>
           <h2>App E-commerce</h2>
           <p>Application de vente en ligne avec panier</p>
           <div className={styles.tags}>
@@ -30,9 +31,9 @@ export default function Projects() {
             <Tag>Node.js</Tag>
             <Tag>MongoDB</Tag>
           </div>
-        </div>
+        </Link>
 
-        <div className={styles.card}>
+        <Link href="/projets/ecommerce" className={styles.card}>
           <h2>Blog Technique</h2>
           <p>Blog personnel sur le développement web</p>
           <div className={styles.tags}>
@@ -40,7 +41,7 @@ export default function Projects() {
             <Tag>Markdown</Tag>
             <Tag>SEO</Tag>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   )

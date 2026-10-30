@@ -1,4 +1,5 @@
 import styles from './page.module.css'
+import { notFound } from 'next/navigation' 
 
 // Liste de projets (normalement, ça viendrait d'une API ou d'une base de données)
 const projets = {
@@ -32,12 +33,7 @@ export default async function ProjectDetail({ params }) {
 
   // Si le projet n'existe pas, afficher un message
   if (!projet) {
-      return (
-          <div className="container">
-              <h1>Projet non trouvé</h1>
-              <p>Ce projet n&apos;existe pas ou a été supprimé.</p>
-          </div>
-      )
+    notFound()
   }
 
   return (
