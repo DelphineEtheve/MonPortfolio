@@ -63,6 +63,16 @@ export default function Navigation() {
               Contact
             </Link>
           </li>
+          <li>
+            <Link href="/formation" className={
+              pathname == "/formation"
+                ? `${styles.link} ${styles.active}`
+                : styles.link
+              }
+            >
+              Formation
+            </Link>
+</li>
         </ul>
       </div>
     </nav>

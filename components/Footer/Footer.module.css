@@ -1,0 +1,25 @@
+.footer{
+    color:#333;
+    margin: 10px;
+}
+
+.footerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.socialLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.2);
+}
