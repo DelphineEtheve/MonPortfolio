@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './page.module.css'
 import Tag from '@/components/Tag/Tag'
 
@@ -10,15 +11,16 @@ export default function Projects() {
       </p>
       
       <div className={styles.grid}>
-        <div className={styles.card}>
-          <h2>Portfolio Personnel</h2>
-          <p>Site web moderne construit avec Next.js</p>
-          <div className={styles.tags}>
-            <Tag>Next.js</Tag>
-            <Tag>React</Tag>
-            <Tag>CSS Modules</Tag>
-          </div>
-        </div>
+         <Link href="/projets/portfolio" className={styles.card}>
+         <h2>Portfolio Personnel</h2>
+         <p>Site web moderne construit avec Next.js</p>
+         <div className={styles.tags}>
+           <Tag>Next.js</Tag>
+           <Tag>React</Tag>
+           <Tag>CSS Modules</Tag>
+         </div>
+       </Link>
+
 
         <div className={styles.card}>
           <h2>App E-commerce</h2>
