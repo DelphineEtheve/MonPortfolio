@@ -102,7 +102,7 @@ export default function Navigation() {
             >
               Formation
             </Link>
-</li>
+          </li>
         </ul>
       </div>
     </nav>
