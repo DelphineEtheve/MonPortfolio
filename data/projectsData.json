@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "slug": "riding-cities",
+    "title": "Riding Cities - Présentation de l'association",
+    "shortDescription": "Application qui permet de présenter l'association et de connaître les horaires de cours",
+    "longDescription": "Riding Cities est une application web moderne qui permet de présenter l'association et de connaître les horaires de cours dans les différentes catégories. Elle présente l'origine de l'association, les valeurs qu'elle défend et les activités proposées. L'application est conçue pour être intuitive et facile à naviguer, offrant une expérience utilisateur agréable.",
+    "image": "/images/projets/riding-citie.png",
+    "tags": ["HTML", "CSS"],
+    "github": "https://github.com/DelphineEtheve/site-Riding-Citites",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "slug": "booki",
+    "title": "Booki - Plateforme de réservation",
+    "shortDescription": "Application de réservation d'hébergements avec recherche avancée",
+    "longDescription": "Booki est une application web de réservation d'hébergements qui permet aux utilisateurs de rechercher et de réserver des logements selon leurs critères. Elle propose une interface intuitive et des fonctionnalités de filtrage avancées pour trouver l'hebergement parfait.",
+    "image": "/images/projets/Booki.png",
+    "tags": ["HTML", "CSS"],
+    "github": "https://github.com/DelphineEtheve/Booki-starter-code-master",
+    "demo": "",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "slug": "sophie-bluel",
+    "title": "Sophie Bluel - Portfolio d'une architecte d'intérieur",
+    "shortDescription": "Présentation des travaux et projets d'une architecte d'intérieur",
+    "longDescription": "Sophie Bluel est une architecte d'intérieur qui présente ses réalisations et projets dans ce portfolio. Elle met en avant son style unique et sa vision créative dans la conception d'espace.",
+    "image": "/images/projets/sophie-bluel.png",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/DelphineEtheve/Projet-Sophie-Bluel",
+    "demo": "",
+    "featured": false
+  }
+]

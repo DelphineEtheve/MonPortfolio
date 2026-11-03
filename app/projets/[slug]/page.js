@@ -1,35 +1,11 @@
 import styles from './page.module.css'
+import projectsData from '@/data/projectsData.json'
 import { notFound } from 'next/navigation' 
 
-// Liste de projets (normalement, ça viendrait d'une API ou d'une base de données)
-const projets = {
-  'portfolio': {
-      title: 'Portfolio Personnel',
-      slug: 'portfolio',
-      technologies:["HTML", "CSS"],
-      description:["Découvrez tous mes projets personnels"]
-      //…..
-  },
-  'ecommerce': {
-      title: 'App E-commerce',
-      slug: 'ecommerce',
-      technologies:["Next.js"],
-      description:["Découvrez tous les sites e-commerces"]
-      //…
-  },
-  'blog': {
-      title: 'Blog Technique',
-      slug: 'blog',
-      technologies:["Autre"],
-      description:["Je vous livre toutes mes astuces"]
-      //…
-  }
-}
-
-export default async function ProjectDetail({ params }) {
+    export default async function ProjectDetail({ params }) {
   const { slug } = await params
   // Next.js passe automatiquement le slug dans params
-  const projet = projets[slug]
+  const projet = projectsData.find((project) => project.slug === slug)
 
   // Si le projet n'existe pas, afficher un message
   if (!projet) {
@@ -40,20 +16,23 @@ export default async function ProjectDetail({ params }) {
       <div className={styles.container}>
           <div className={styles.header}>
               <h1 className={styles.title}>{projet.title}</h1>
-              <p className={styles.description}>{projet.description}</p>
+              <p className={styles.longDescription}>{projet.longDescription}</p>
           </div>
 
           <div className={styles.content}>
               <div className={styles.imageWrapper}>
-                  <div className={styles.imagePlaceholder}>
-                      Image du projet
-                  </div>
+                   <img
+                    className={styles.image}
+                    src={projet.image}
+                    alt={projet.title}
+                    />
+
               </div>
 
               <div className={styles.details}>
                   <h2>Technologies utilisées</h2>
                   <div className={styles.technologies}>
-                      {projet.technologies.map((tech, index) => (
+                      {projet.tags.map((tech, index) => (
                           <span key={index} className={styles.tech}>
                               {tech}
                           </span>

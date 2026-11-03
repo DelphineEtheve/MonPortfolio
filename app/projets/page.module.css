@@ -10,6 +10,9 @@
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -44,15 +47,31 @@
 }
 /* ... styles existants ... */
 
-.card {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
+
 
 .viewMore {
   display: inline-block;
   margin-top: 1rem;
   color: #667eea;
   font-weight: 600;
+}
+
+
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  
+}
+
+.image {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-position: center;
+  
 }
