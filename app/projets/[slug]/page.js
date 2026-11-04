@@ -1,8 +1,9 @@
 import styles from './page.module.css'
+import Image from 'next/image'
 import projectsData from '@/data/projectsData.json'
 import { notFound } from 'next/navigation' 
 
-    export default async function ProjectDetail({ params }) {
+    export default async function generateMetadata({ params }) {
   const { slug } = await params
   // Next.js passe automatiquement le slug dans params
   const projet = projectsData.find((project) => project.slug === slug)
@@ -21,10 +22,13 @@ import { notFound } from 'next/navigation'
 
           <div className={styles.content}>
               <div className={styles.imageWrapper}>
-                   <img
+                   <Image
                     className={styles.image}
                     src={projet.image}
                     alt={projet.title}
+                    width={800}
+                    height={500}
+                    preload={true}
                     />
 
               </div>

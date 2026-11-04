@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './page.module.css';
 import formationsData from '@/data/formations.json';
 import { notFound } from 'next/navigation';
@@ -11,6 +12,8 @@ export default async function FormationDetail({ params }) {
     notFound()
   }
 
+ 
+
   return (
       <div className={styles.container}>
           <div className={styles.header}>
@@ -19,14 +22,18 @@ export default async function FormationDetail({ params }) {
           </div>
 
           <div className={styles.content}>
-              <div className={styles.imageWrapper}>
-                   <img
+              {formation.image && (
+                <div className={styles.imageWrapper}>
+                 <Image
+                    width={800}
+                    height={500}
                     className={styles.image}
                     src={formation.image}
                     alt={formation.title}
-                    />
-
-              </div>
+                    preload={true}
+                 />
+                </div>
+  )}
 
               <div className={styles.details}>
                   <h2>Durée de la formation</h2>

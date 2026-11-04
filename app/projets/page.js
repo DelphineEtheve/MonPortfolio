@@ -1,8 +1,13 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './page.module.css'
 import projectsData from '@/data/projectsData.json'
 import Tag from '@/components/Tag/Tag'
 
+export const metadata = {
+  title: 'Mes Projets',
+  description: 'Découvrez les projets sur lesquels j\'ai travaillé',
+}
 export default function Projects() {
   return (
     <div className={styles.container}>
@@ -19,9 +24,11 @@ export default function Projects() {
             className={styles.card}  
         >
           <div className={styles.cardImage}>
-            <img
+            <Image
              src={project.image} 
              alt={project.title}
+              width={800}
+              height={500}
              className={styles.image} />
           </div>
 
