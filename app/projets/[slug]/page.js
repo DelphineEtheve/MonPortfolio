@@ -62,3 +62,9 @@ import { notFound } from 'next/navigation'
       </div>
   )
 }
+// Cette fonction génère toutes les pages statiques au build
+export function generateStaticParams() {
+   return projectsData.map((project) => ({
+       slug: project.slug,
+   }))
+}
